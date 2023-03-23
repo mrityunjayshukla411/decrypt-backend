@@ -53,7 +53,7 @@ app.use(cookieParser());
 
 // //testing db
 
-mongoose.connect("mongodb+srv://shreyaslshah:shreyasshah@cluster0.bakje.mongodb.net/decrypt?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
